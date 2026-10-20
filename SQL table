@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS job_application;
+USE job_application;
+
+CREATE TABLE applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    position VARCHAR(50) NOT NULL,
+    experience_years INT,
+    skills TEXT,
+    education VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
